@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background: #000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    text-align: center;
+    padding: 20px;
+}
+
+h1{
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+#generateBtn, #saveBtn{
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    border: none;
+    transition: all .2s ease-in-out;
+    margin-bottom: 4rem;
+}
+
+#saveBtn{
+    background: greenyellow;
+    margin-left: 2rem;
+}
+
+#generateBtn:hover, #saveBtn:hover{
+    transform: scale(1.05);
+}
+.colorPalette{
+    display: flex;
+    gap: 2rem;
+}
+
+.color-card{
+    width: 9rem;
+    height: 12rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: end;
+    padding: .5rem;
+}
+
+.color-content{
+    display: flex;
+    gap: .5rem;
+    background: white;
+    padding: 5px;
+    border-radius: .2rem;
+}
+
+.copy-icon{
+    cursor: pointer;
+}
+
+.toast{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    background: black;
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    font-size: 1rem;
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+
+    pointer-events: none;
+}
+
+.toast.show{
+    opacity: 1;
+    transform: translateY(0);
+}
